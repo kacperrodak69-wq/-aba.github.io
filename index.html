@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Żaba Kurwa</title>
+
+<style>
+
+/* Obracanie + skalowanie + pulsowanie */
+@keyframes spinScalePulse {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    25% {
+        transform: rotate(90deg) scale(0.7);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.3);
+    }
+    75% {
+        transform: rotate(270deg) scale(0.9);
+    }
+    100% {
+        transform: rotate(360deg) scale(1.5);
+    }
+}
+
+/* Animacja kolorów tęczowych */
+@keyframes rainbowColors {
+    0% { filter: hue-rotate(0deg); color: red; }
+    25% { filter: hue-rotate(90deg); color: yellow; }
+    50% { filter: hue-rotate(180deg); color: lime; }
+    75% { filter: hue-rotate(270deg); color: cyan; }
+    100% { filter: hue-rotate(360deg); color: magenta; }
+}
+
+/* Efekt pulsowania tekstu (jasność) */
+@keyframes pulseGlow {
+    0% { text-shadow: 0 0 5px white; }
+    50% { text-shadow: 0 0 20px white; }
+    100% { text-shadow: 0 0 5px white; }
+}
+
+/* Styl animacji */
+.animate {
+    display: inline-block;
+    animation:
+        spinScalePulse 3s infinite linear,
+        rainbowColors 2s infinite linear;
+}
+
+.text {
+    font-size: 40px;
+    font-weight: bold;
+    animation:
+        spinScalePulse 3s infinite linear,
+        rainbowColors 2s infinite linear,
+        pulseGlow 1.5s infinite ease-in-out;
+}
+
+body {
+    background: black;
+    text-align: center;
+    padding-top: 50px;
+}
+
+</style>
+</head>
+
+
+<body>
+
+    <div class="animate">
+        <img src="https://imgs.search.brave.com/IwP6SCwVn9BZ9iCnGd90Km7oSE_SnNHTpooLc3vnSas/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly96YWNo/b2RuaWEudHYvd3At/Y29udGVudC91cGxv/YWRzLzIwMjQvMDIv/emFiYS1tb2N6YXJv/d2EtMTAyNHg2ODMu/anBn"
+        alt="żaba" width="300">
+    </div>
+
+    <br><br>
+
+    <div class="text">frog kurwa</div>
+
+</body>
+</html>
